@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/*************************************************
+common-style
+*************************************************/
+* {
+  box-sizing: border-box;
+}
+
+.ie_ObjectFit {
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #FEFCF6;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input[type=submit],
+input[type=button] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  border: none;
+  box-sizing: border-box;
+}
+input[type=submit]::-webkit-search-decoration,
+input[type=button]::-webkit-search-decoration {
+  display: none;
+}
+input[type=submit]:focus,
+input[type=button]:focus {
+  outline-offset: -2px;
+}
+
+.video_container {
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/Home.png") no-repeat right center/90vw;
+  height: 100vh;
+  position: relative;
+}
+.video_container video {
+  position: absolute;
+  left: 45%;
+  bottom: 10%;
+  transform: translate(-50%, 0);
+  width: 65.74vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: visible;
+}
+
+.svg {
+  transform: rotate(-90deg);
+}
+
+.circle {
+  stroke: #F2E8CE;
+  stroke-width: 1px;
+  animation: circleAnim 1.5s forwards;
+  fill: transparent;
+  stroke-dasharray: 622px;
+  stroke-dashoffset: 622px;
+}
+
+@keyframes circleAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.box {
+  height: 100vh;
+}
+
+.bg {
+  background-color: #3C3631;
+  padding: 100px 0;
+}
+
+.svg_container {
+  margin: 0 auto;
+  position: relative;
+  width: 363px;
+  height: 340px;
+}
+
+.svg_inner {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: nowrap;
+  animation: fade 1.8s forwards;
+  opacity: 0;
+  color: #F2E8CE;
+  font-weight: 200;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.svg1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.svg2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.svg2 .svg .circle {
+  animation-delay: 0.6s;
+}
+.svg2 .text {
+  animation-delay: 0.6s;
+}
+
+.svg3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.svg3 .svg .circle {
+  animation-delay: 1s;
+}
+.svg3 .text {
+  animation-delay: 1s;
+}
+
+.u-pc {
+  display: block;
+}
+@media screen and (max-width: 599px) {
+  .u-pc {
+    display: none !important;
+  }
+}
+
+.u-pc-inlineblock {
+  display: inline-block;
+}
+@media screen and (max-width: 599px) {
+  .u-pc-inlineblock {
+    display: none;
+  }
+}
+
+.u-sp {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .u-sp {
+    display: block;
+  }
+}
+
+.u-sp-inlineblock {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .u-sp-inlineblock {
+    display: inline-block;
+  }
+}
+
+.u-sp-inline {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .u-sp-inline {
+    display: inline;
+  }
+}
+
+.u-align--center {
+  text-align: center;
+}
+
+/*************************************************
+header
+*************************************************/
+/*************************************************
+footer
+*************************************************/
+/*************************************************
+top
+*************************************************//*# sourceMappingURL=style.css.map */

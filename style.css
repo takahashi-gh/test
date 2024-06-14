@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*************************************************
+common-style
+*************************************************/
+* {
+  box-sizing: border-box;
+}
+
+.ie_ObjectFit {
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input[type=submit],
+input[type=button] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  border: none;
+  box-sizing: border-box;
+}
+input[type=submit]::-webkit-search-decoration,
+input[type=button]::-webkit-search-decoration {
+  display: none;
+}
+input[type=submit]:focus,
+input[type=button]:focus {
+  outline-offset: -2px;
+}
+
+.u-pc {
+  display: block;
+}
+@media screen and (max-width: 599px) {
+  .u-pc {
+    display: none !important;
+  }
+}
+
+.u-pc-inlineblock {
+  display: inline-block;
+}
+@media screen and (max-width: 599px) {
+  .u-pc-inlineblock {
+    display: none;
+  }
+}
+
+.u-sp {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .u-sp {
+    display: block;
+  }
+}
+
+.u-sp-inlineblock {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .u-sp-inlineblock {
+    display: inline-block;
+  }
+}
+
+.u-sp-inline {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .u-sp-inline {
+    display: inline;
+  }
+}
+
+.u-align--center {
+  text-align: center;
+}
+
+/*************************************************
+header
+*************************************************/
+/*************************************************
+footer
+*************************************************/
+/*************************************************
+top
+*************************************************//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <!-- <meta name="robots" content="index, follow"> -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" >
+  <link rel="stylesheet" type="text/css" href="scss/style.css" >
+  
+  <title>サイトタイトル</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+</head>
+
+<body>
+  <header></header>
+
+  <main>
+    <div class="video_container">
+      <video muted playsinline autoplay loop width="898" height="448">
+        <!-- QuickTime動画 -->
+        <source src="images/mv_noise-1.mov" type="video/quicktime" />
+        <!-- WebM動画 -->
+        <source src="images/mv_noise.webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="box"></div>
+    <div class="bg">
+      <div class="svg_container">
+        <div class="svg1">
+          <div class="svg_inner">
+            <svg class="svg" width="198" height="198" viewBox="0 0 198 198">
+            <circle class="circle" cx="99" cy="99" r="98.5" />
+            </svg>
+            <div class="text">
+              適切なワークフロー
+            </div>
+          </div>
+        </div>
+        <div class="svg2">
+          <div class="svg_inner">
+            <svg class="svg" width="198" height="198" viewBox="0 0 198 198">
+            <circle class="circle" cx="99" cy="99" r="98.5" />
+            </svg>
+            <div class="text">
+              臨機応変な<br>対応力
+            </div>
+          </div>
+        </div>
+        <div class="svg3">
+          <div class="svg_inner">
+            <svg class="svg" width="198" height="198" viewBox="0 0 198 198">
+            <circle class="circle" cx="99" cy="99" r="98.5" />
+            </svg>
+            <div class="text">
+              妥協しない<br>クオリティー
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</video>
+  </main>
+
+  <footer></footer>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+  <script>
+    // https://github.com/protonet/jquery.inview /で対応
+    $('.scroll').on('inview', function () { // .sxrollが表示されたら
+      $(this).addClass('active'); //処理を記述
+    });
+  </script>
+</body>
+
+</html>

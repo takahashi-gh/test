@@ -1,0 +1,188 @@
+/*************************************************
+common-style
+*************************************************/
+@mixin base_width{
+  margin: 0 auto;
+  width: 1200px;
+}
+// @extendでスタイルの継承
+// @mixinでステイルの定義
+// @includeでmixinの呼び出し
+
+// ブレイクポイント
+// PC基準でコーディングする場合
+$breakpoints: (
+  "sm": "screen and (max-width: 599px)", //スマホ
+  "md": "screen and (max-width: 1024px)", //タブレット
+) !default;
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints , $breakpoint)} {
+    @content;
+  }
+}
+
+// スマホ基準でコーディングする場合
+// $breakpoints: (
+//   "md": "screen and (min-width: 600px)", //タブレット
+//   "lg": "screen and (min-width: 1025px)", //パソコン
+// ) !default;
+// @mixin mq($breakpoint: lg) {
+//   @media #{map-get($breakpoints , $breakpoint)} {
+//     @content;
+//   }
+// }
+
+*{
+  box-sizing: border-box;
+}
+
+.ie_ObjectFit {
+object-fit: cover;
+font-family: 'object-fit: cover;'
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  scroll-behavior: smooth;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  // font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+  background-color: #FEFCF6;
+}
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+
+// /iOSでのデフォルトスタイルをリセット /
+input[type="submit"],
+input[type="button"] {
+border-radius: 0;
+-webkit-box-sizing: content-box;
+-webkit-appearance: button;
+appearance: button;
+border: none;
+box-sizing: border-box;
+&::-webkit-search-decoration {
+display: none;
+}
+&:focus {
+outline-offset: -2px;
+}
+}
+
+.video_container {
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/Home.png") no-repeat right center / 90vw;
+  height: 100vh;
+  position: relative;
+  video {
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    transform: translate(-50%, 0);
+    width: 65.74vw;
+    object-fit: cover;
+    overflow: visible;
+  }
+}
+
+
+.svg {
+  transform:rotate(-90deg); // デフォルトだとSVGの線の開始位置が90°の地点からになるので、0°の地点にまで戻してやる。
+}
+
+.circle {
+  stroke: #F2E8CE;
+  stroke-width: 1px;
+  animation: circleAnim 1.5s forwards;
+  fill: transparent;
+  stroke-dasharray: 622px;
+  stroke-dashoffset: 622px;
+}
+
+@keyframes circleAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.box {
+  height: 100vh;
+}
+.bg {
+  background-color: #3C3631;
+  padding: 100px 0;
+}
+.svg_container {
+  margin: 0 auto;
+  position: relative;
+  width: 363px;
+  height: 340px;
+}
+.svg_inner {
+  position: relative;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: nowrap;
+  animation: fade 1.8s forwards;
+  opacity: 0;
+  color: #F2E8CE;
+  font-weight: 200;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    // transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 1;
+    // transform: translate(-50%, -50%);
+  }
+}
+.svg1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.svg2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  .svg {
+    .circle {
+      animation-delay: .6s;
+    }
+  }
+  .text {
+    animation-delay: .6s;
+  }
+}
+.svg3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  .svg {
+    .circle {
+      animation-delay: 1.0s;
+    }
+  }
+  .text {
+    animation-delay: 1.0s;
+  }
+}
+
